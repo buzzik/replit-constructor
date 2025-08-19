@@ -72,13 +72,15 @@ export default function PricingSummary({
 
       {/* Options Breakdown */}
       <div className="mb-6">
-        <h4 className="font-medium text-gray-800 mb-3">Selected Options</h4>
+        <h4 className="font-medium text-gray-800 mb-3">Options Included</h4>
         <div className="space-y-2 text-sm">
           {pricing.optionBreakdown.map((option, index) => (
             <div key={index} className="flex justify-between">
               <span className="text-gray-600">{option.name}</span>
               <span className="text-gray-800">
-                {option.price === 0 ? "Included" : `+$${option.price.toLocaleString()}`}
+                {option.price === 0
+                  ? "Included"
+                  : `+$${option.price.toLocaleString()}`}
               </span>
             </div>
           ))}
@@ -89,19 +91,27 @@ export default function PricingSummary({
       <div className="space-y-3 mb-6">
         <div className="flex justify-between py-2 border-b border-gray-200">
           <span className="text-gray-600">Subtotal</span>
-          <span className="font-medium">${pricing.subtotal.toLocaleString()}</span>
+          <span className="font-medium">
+            ${pricing.subtotal.toLocaleString()}
+          </span>
         </div>
         <div className="flex justify-between py-2 border-b border-gray-200">
           <span className="text-gray-600">Options</span>
-          <span className="font-medium">${pricing.optionsTotal.toLocaleString()}</span>
+          <span className="font-medium">
+            ${pricing.optionsTotal.toLocaleString()}
+          </span>
         </div>
         <div className="flex justify-between py-2 border-b border-gray-200">
           <span className="text-gray-600">Tax & Fees</span>
-          <span className="font-medium">${pricing.taxFees.toLocaleString()}</span>
+          <span className="font-medium">
+            ${pricing.taxFees.toLocaleString()}
+          </span>
         </div>
         <div className="flex justify-between py-3 text-lg font-bold border-t-2 border-ev-blue">
           <span className="text-gray-800">Total Price</span>
-          <span className="text-ev-blue">${pricing.total.toLocaleString()}</span>
+          <span className="text-ev-blue">
+            ${pricing.total.toLocaleString()}
+          </span>
         </div>
       </div>
 
@@ -132,7 +142,9 @@ export default function PricingSummary({
 
       {/* Contact Information */}
       <div className="mt-6 pt-6 border-t border-gray-200 text-sm text-gray-600">
-        <h5 className="font-medium text-gray-800 mb-2">Your Sales Representative</h5>
+        <h5 className="font-medium text-gray-800 mb-2">
+          Your Sales Representative
+        </h5>
         <div className="space-y-1">
           <p>Sarah Johnson</p>
           <p>📞 (555) 123-4567</p>
