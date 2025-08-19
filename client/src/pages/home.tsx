@@ -43,7 +43,12 @@ export default function Home() {
       
       const configuration: CarConfiguration = {
         carModel: selectedCarId,
-        ...selectedOptions,
+        color: selectedOptions.color,
+        battery: selectedOptions.battery,
+        software: selectedOptions.software,
+        hardware: selectedOptions.hardware,
+        interior: selectedOptions.interior,
+        wheels: selectedOptions.wheels,
       };
 
       const optionsPricing: Record<string, number> = {};
